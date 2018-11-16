@@ -48,24 +48,40 @@ iframe{ position:absolute; height:100%; width:100%; border:none;}
 #unlock{ float: left; }
 #lock-box p{ color:#e60000; }
 /*顶部*/
+.layui-layout-admin .layui-header {
+    background-color: #567;
+}
 .header{ z-index:2000;}
 .logo{ color: #fff; float: left; line-height:60px; font-size:20px; padding:0 25px; text-align: center; width:150px;}
-.hideMenu{ float:left; width:20px; height:20px; margin-top:15px; font-size:17px; line-height:20px; text-align:center; padding:5px 5px; color:#fff; background-color:#54ade8; }
+.hideMenu{ float:left; width:20px; height:20px; margin-top:15px; font-size:17px; line-height:20px; text-align:center; padding:5px 5px; color:#fff; }
 .hideMenu:hover{ color:#fff; }
 .layui-nav cite{ margin-left: 5px;}
+.layui-nav .layui-this::after,.layui-nav-bar, .layui-nav-tree .layui-nav-itemed::after {
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 0;
+    height: 5px;
+    background-color: #5FB878;
+    transition: all .2s;
+    -webkit-transition: all .2s !important;
+
+}
 /*顶部右侧*/
 .topLevelMenus{float:left;}
 .topLevelMenus li.layui-nav-item:hover{ background-color:rgba(221,221,221,0.2);}
 .layui-nav .layui-this:after{ bottom:-5px!important;}
 .header .layui-nav-bar{top:60px !important;}
-.topLevelMenus .layui-nav-item.layui-this{ background-color:#54ade8;}
+.topLevelMenus .layui-nav-item.layui-this a{color: rgb(255, 208, 75);}
 .top_menu.layui-nav .layui-this:after{ width:0px; }
-.top_menu .layui-nav-bar,.mobileTopLevelMenus .layui-nav-bar{background-color:rgba(0,0,0,0.7);}
+.top_menu .layui-nav-bar,.mobileTopLevelMenus .layui-nav-bar{background-color:#5FB878;}
 
 /*左侧导航*/
 .layui-nav{background-color: inherit !important;}
 .showMenu.layui-layout-admin .layui-side{ left:-200px; }
 .showMenu .layui-body,.showMenu .layui-footer{ left:0; }
+.layui-bg-black {background-color:#545c64 !important}
+.layui-nav-tree .layui-this a {color: rgb(255, 208, 75);background-color:#545c64 !important}
 /*左侧用户头像*/
 .top_menu{ background-color:inherit !important; position:absolute; right:0;top:0; }
 .layui-layout-admin .layui-side{ left:0; overflow:hidden;}
@@ -74,9 +90,11 @@ iframe{ position:absolute; height:100%; width:100%; border:none;}
 .user-photo a.img img{ display: block; border: none; width: 100%; height: 100%; border-radius: 50%; -webkit-border-radius: 50%; -moz-border-radius: 50%; border: 4px solid #44576b; box-sizing:border-box;}
 .user-photo p{ display: block; width: 100%; height: 25px; color: #ffffff; text-align: center; font-size: 12px; white-space: nowrap;line-height: 25px; overflow: hidden;}
 /*左侧导航重定义*/
-.layui-nav-item.layui-nav-itemed{ background-color:#2B2E37 !important;}
-.layui-nav-itemed:before{ width:5px; height:100%; background-color:#fff; position:absolute; content:''; left:0; top:0;}
-.layui-nav-itemed .layui-nav-child a{ padding-left:40px;}
+.layui-nav-item.layui-nav-itemed{ background-color:#545c64 !important;}
+.layui-nav-itemed:before{ width:0px; height:100%; background-color:#fff; position:absolute; content:''; left:0; top:0;}
+.layui-nav-itemed .layui-nav-child a { padding-left:40px; background-color:#545c64 !important}
+.layui-nav-itemed .layui-nav-child .layui-this  a {color: rgb(255, 208, 75) !important}
+.layui-nav-tree .layui-nav-bar {width: 0px;height: 0;background-color: #54ade8;}
 /*左侧搜索框*/
 .component{ width:180px; height:30px; margin:0 auto 5px; position:relative;}
 .component .layui-input{ height:30px; line-height: 30px; font-size:12px; border:none; transition: all 0.3s; background:rgba(255,255,255,0.05); }
@@ -88,10 +106,9 @@ iframe{ position:absolute; height:100%; width:100%; border:none;}
 .component dl dd.layui-select-tips{ color:#999 !important;}
 
 /*layui-body*/
-.layui-body{overflow:hidden; border-top:5px solid #54ade8;border-left:2px solid #54ade8; background:#fff;}
+.layui-body{overflow:hidden; border-top:0px solid #54ade8;border-left:0px solid #54ade8; background:#fff;}
 #top_tabs_box{ padding-right:138px; height:40px; border-bottom:1px solid #e2e2e2; }
 #top_tabs{ position: absolute; border-bottom:none;}
-.layui-tab-title .layui-this{ background-color:#54ade8; color:#fff; }
 .layui-tab-title .layui-this:after{ border:none; }
 .layui-tab-title li cite{ font-style: normal; padding-left:5px; }
 .clildFrame.layui-tab-content{ top:41px; position:absolute; bottom:0; width:100%; padding:0;}
